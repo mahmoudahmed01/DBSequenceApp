@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ClientsEO"
+  Version="12.2.1.11.57"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="CLIENTS"
+  AliasName="ClientsEO"
+  BindingStyle="OracleName"
+  RowClass="org.diveinoracle.dbsequence.model.ClientsEOImpl">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Init|Access"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Attribute
+    Name="ClientId"
+    ColumnName="CLIENT_ID"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="CLIENTS"
+    PrimaryKey="true">
+    <TransientExpression
+      Name="ExpressionScript"
+      trustMode="trusted"
+      CodeSourceName="ClientsEORow"/>
+  </Attribute>
+  <Attribute
+    Name="ClientName"
+    Precision="128"
+    ColumnName="CLIENT_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CLIENTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="128"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ClientAddress"
+    Precision="256"
+    ColumnName="CLIENT_ADDRESS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="CLIENTS">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="256"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="ClientsClientIdCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"CLIENT_ID" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="CLIENTS_CLIENT_ID_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.diveinoracle.dbsequence.model.ClientsEO.ClientId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SysC0045821"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYS_C0045821"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="org.diveinoracle.dbsequence.model.ClientsEO.ClientId"/>
+    </AttrArray>
+  </Key>
+</Entity>

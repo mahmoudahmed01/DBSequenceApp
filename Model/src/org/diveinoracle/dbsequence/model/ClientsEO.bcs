@@ -1,0 +1,12 @@
+//Groovy Scripts for org.diveinoracle.dbsequence.model.ClientsEO
+
+package org.diveinoracle.dbsequence.model
+
+import oracle.jbo.script.annotation.TransientValueExpression;
+
+@TransientValueExpression(attributeName="ClientId")
+def ClientId_ExpressionScript_Expression()
+{
+(new oracle.jbo.server.SequenceImpl("CLIENT_SEQ", adf.object.getDBTransaction())).getSequenceNumber()
+}
+

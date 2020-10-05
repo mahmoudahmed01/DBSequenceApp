@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="org.diveinoracle.dbsequence.model.AppModule">
+      <AppModuleConfig name="AppModuleLocal" ApplicationName="org.diveinoracle.dbsequence.model.AppModule" DeployPlatform="LOCAL" jbo.project="org.diveinoracle.dbsequence.model.Model">
+         <Security AppModuleJndiName="org.diveinoracle.dbsequence.model.AppModule"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/LocalDbConnectionDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="AppModuleShared" ApplicationName="org.diveinoracle.dbsequence.model.AppModule" DeployPlatform="LOCAL" jbo.project="org.diveinoracle.dbsequence.model.Model">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="org.diveinoracle.dbsequence.model.AppModule"/>
+         <Custom ns0:JDBCDataSource="java:comp/env/jdbc/LocalDbConnectionDS" xmlns:ns0="http://xmlns.oracle.com/bc4j/configuration"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>
